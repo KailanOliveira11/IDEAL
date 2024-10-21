@@ -18,7 +18,7 @@
       let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
       
       if( ! action ) {
-        displayError(thisForm, 'The form action property is not set!');
+        displayError(thisForm, 'A propriedade action do formulário não está definida!');
         return;
       }
       thisForm.querySelector('.loading').classList.add('d-block');
@@ -28,7 +28,7 @@
       let formData = new FormData( thisForm );
 
       if ( recaptcha ) {
-        if(typeof grecaptcha !== "undefined" ) {
+        if(typeof grecaptcha !== "indefinido" ) {
           grecaptcha.ready(function() {
             try {
               grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
@@ -41,7 +41,7 @@
             }
           });
         } else {
-          displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
+          displayError(thisForm, 'A URL da API Javascript do reCaptcha não foi carregada!')
         }
       } else {
         php_email_form_submit(thisForm, action, formData);
@@ -68,7 +68,7 @@
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(data ? data : 'A submissão do formulário falhou e nenhuma mensagem de erro foi retornada de: ' + action); 
       }
     })
     .catch((error) => {

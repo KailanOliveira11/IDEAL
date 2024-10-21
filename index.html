@@ -45,7 +45,7 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
                     <li><a class="nav-link scrollto" href="#about-us">Sobre</a></li>
-                    <li><a class="nav-link scrollto" href="#features">Services</a></li>
+                    <li><a class="nav-link scrollto" href="#features">Serviços</a></li>
                     <!--<li><a class="nav-link scrollto" href="#screenshots">Screenshots</a></li>-->
                     <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li>-->
                    <!-- <li><a class="nav-link scrollto" href="#pricing">Planos</a></li>-->
@@ -623,27 +623,72 @@ Está com dúvidas ou sua empresa precisa de um contador de confiança? Não hes
                     </div>
 
                        <div class="col-lg-5 col-md-8">
-                        <div class="form">
-                            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" required>
-                                </div>
-                                <div class="form-group mt-3">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Seu e-mail" required>
-                                </div>
-                                <div class="form-group mt-3">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
-                                </div>
-                                <div class="form-group mt-3">
-                                    <textarea class="form-control" name="message" rows="5" placeholder="mensagem" required></textarea>
-                                </div>
-                                <div class="my-3">
-                                    <div class="loading">Carregando</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Sua mensagem foi encaminhada com sucesso, Obrigado pelo contato!</div>
-                                </div>
-                                <div class="text-center"><button type="submit">Enviar mensagem</button></div>
-                            </form> 
+                       <div class="form">
+    <form 
+        action="#" 
+        method="POST" 
+        role="form" 
+        class="php-email-form" 
+        data-netlify="true" 
+        netlify 
+    >
+        <input type="hidden" name="form-name" value="Contact Form" />
+        
+        <div class="form-group">
+            <input 
+                type="text" 
+                name="name" 
+                class="form-control" 
+                id="name" 
+                placeholder="Seu nome" 
+                required 
+            >
+        </div>
+        
+        <div class="form-group mt-3">
+            <input 
+                type="email" 
+                class="form-control" 
+                name="email" 
+                id="email" 
+                placeholder="Seu e-mail" 
+                required 
+            >
+        </div>
+        
+        <div class="form-group mt-3">
+            <input 
+                type="text" 
+                class="form-control" 
+                name="subject" 
+                id="subject" 
+                placeholder="Assunto" 
+                required 
+            >
+        </div>
+        
+        <div class="form-group mt-3">
+            <textarea 
+                class="form-control" 
+                name="message" 
+                rows="5" 
+                placeholder="Mensagem" 
+                required 
+            ></textarea>
+        </div>
+        
+        <div class="my-3">
+            <div class="loading">Carregando...</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Sua mensagem foi encaminhada com sucesso! Obrigado pelo contato!</div>
+        </div>
+        
+        <div class="text-center">
+            <button type="submit">Enviar mensagem</button>
+        </div>
+    </form>
+</div>
+
                 </div>
             </div>
             </div>

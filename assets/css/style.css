@@ -1465,23 +1465,20 @@ section {
         background-color: #128C7E; /* Cor ao passar o mouse */
     }
 /* BOTÃO DE WHATSAPP ICON */
-.button2-container {
+.icon-container {
         display: flex;
         justify-content: center; /* Centraliza horizontalmente */
-        align-items: center; /* Centraliza verticalmente (opcional) */
-        height: 100vh; /* Altura total da tela (opcional) */
+        align-items: center; /* Centraliza verticalmente */
+        height: 100vh; /* Altura total da tela */
     }
 
-    .whatsapp2-button {
-        background-color: #25D366; /* Cor do WhatsApp */
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
+    .whatsapp-icon {
+        font-size: 50px; /* Tamanho do ícone */
+        color: #25D366; /* Cor do ícone (cor oficial do WhatsApp) */
         text-decoration: none;
-        font-size: 16px;
-        transition: background-color 0.3s;
+        transition: color 0.3s;
     }
 
-    .whatsapp2-button:hover {
-        background-color: #128C7E; /* Cor ao passar o mouse */
+    .whatsapp-icon:hover {
+        color: #128C7E; /* Cor ao passar o mouse */
     }

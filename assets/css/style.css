@@ -1482,3 +1482,17 @@ section {
     .whatsapp-icon:hover {
         color: #128C7E; /* Cor ao passar o mouse */
     }
+    .error-animation {
+      margin-top: 50px;
+      position: relative;
+  }
+  
+  .circle {
+      width: 100px;
+      height: 100px;
+      background-color: #ff6b6b;
+      border-radius: 50%;
+      animation: bounce 1.5s infinite;
+      position: relative;
+      z-index: 10;
+  }

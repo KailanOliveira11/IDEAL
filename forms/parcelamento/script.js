@@ -33,21 +33,6 @@ function criarPDF() {
   const valorEntrada = document.getElementById("valorEntrada").value;
   const observacao = document.getElementById('observacao').value;
 
-  // Função para quebrar linha com base na quantidade de palavras
-  function quebrarTextoPorPalavras(texto, palavrasPorLinha) {
-    const palavras = texto.split(' ');
-    const linhas = [];
-    for (let i = 0; i < palavras.length; i += palavrasPorLinha) {
-      linhas.push(palavras.slice(i, i + palavrasPorLinha).join(' '));
-    }
-    return linhas;
-  }
-
-  // Definindo a quantidade de palavras por linha (exemplo: 5)
-  const palavrasPorLinha = 5;
-  const observacaoLinhas = quebrarTextoPorPalavras(observacao, palavrasPorLinha);
-  const observacaoHeight = observacaoLinhas.length * 10; // Altura dinâmica baseada no número de linhas
-
   // Tentar carregar o logo
   const logo = 'logo_ideal_sc.png';
   try {
@@ -109,21 +94,26 @@ function criarPDF() {
   // Campo de Observação com ajuste de altura dinâmica
   doc.setFont("helvetica", "normal");
   const observacaoLabel = "Observação:";
-  
+
   // Label de Observação
   doc.setFillColor(240);
   doc.setDrawColor(220);
-  doc.rect(startX, startY, colWidthLabel, observacaoHeight, "FD");
+  doc.rect(startX, startY, colWidthLabel, rowHeight, "FD");
   doc.setTextColor(50);
   doc.text(observacaoLabel, startX + 3, startY + 7);
 
-  // Conteúdo de Observação
+  // Conteúdo de Observação ajustado para caber na largura disponível
+  const maxWidth = colWidthValue - 6; // Espaço disponível para texto
+  const observacaoLinhas = doc.splitTextToSize(observacao, maxWidth);
+  const observacaoHeight = observacaoLinhas.length * 7; // Altura baseada no número de linhas geradas
+
+  // Ajustar posição da caixa de observação
   doc.rect(startX + colWidthLabel, startY, colWidthValue, observacaoHeight, "FD");
   doc.setTextColor(220);
 
-  // Adiciona cada linha de texto da observação, quebrada pelo limite de palavras
+  // Adiciona cada linha de texto da observação
   observacaoLinhas.forEach((linha, index) => {
-    doc.text(linha, startX + colWidthLabel + 3, startY + 7 + (index * 10));
+    doc.text(linha, startX + colWidthLabel + 3, startY + 7 + (index * 7));
   });
 
   startY += observacaoHeight;

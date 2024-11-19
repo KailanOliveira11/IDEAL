@@ -99,7 +99,7 @@ button:hover {
   }
 }
 #observacao {
-  width: 100%;
+  width: 200%;
   padding: 10px;
   border: 1px solid #444; /* Borda levemente destacada */
   background-color: #2b2b2b; /* Fundo do textarea */
@@ -123,4 +123,7 @@ button:hover {
 #observacao:focus {
   border-color: #3f51b5; /* Destacar borda ao focar no campo */
   box-shadow: 0 0 8px #3f51b5; /* Sombra adicional ao focar */
+}
+element.style {
+    height: 60px;
 }

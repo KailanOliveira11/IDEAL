@@ -92,7 +92,8 @@ function criarPDF() {
   });
 
   // Campo de Observação com ajuste de altura dinâmica
-  doc.setFont("helvetica", "normal");
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(12)
   const observacaoLabel = "Observação:";
 
   // Label de Observação

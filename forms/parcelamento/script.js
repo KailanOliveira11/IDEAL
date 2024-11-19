@@ -122,8 +122,9 @@ function criarPDF() {
   // Nota de rodapé
   doc.setFontSize(10);
   doc.setTextColor(100);
-  doc.text("Este recibo é emitido automaticamente pelo sistema de parcelamento.", 20, startY + 20);
-  doc.text("O valor da entrada, após o pagamento da primeira é paga juntamente as demais parcelas do acordo.", 20, startY + 25);
+ doc.text("Prezado(a), estamos aguardando a autorização para realizar o parcelamento.", 20, startY + 15);
+  doc.text("Este recibo é emitido automaticamente pelo sistema de parcelamento para melhor visualização e entendimento.", 20, startY + 20);
+  doc.text("O valor da entrada, após o pagamento da primeira é paga, juntamente as demais parcelas do acordo caso tenha mais de uma entrada.", 20, startY + 25);
   doc.text("Caso não pague a primeira parcela de entrada, o acordo é cancelado após o vencimento da DARF.", 20, startY + 30);
   doc.text("Necessário ser refeito! Para mais informações, entre em contato com nosso atendimento.", 20, startY + 35);
 

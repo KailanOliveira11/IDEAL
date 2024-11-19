@@ -101,7 +101,7 @@ function criarPDF() {
   doc.setDrawColor(220);
   doc.rect(startX, startY, colWidthLabel, rowHeight, "FD");
   doc.setTextColor(50);
-  doc.text(observacaoLabel, startX + 3, startY + 7);
+  doc.text(observacaoLabel, startX + 3, startY + 5);
 
   // Conteúdo de Observação ajustado para caber na largura disponível
   const maxWidth = colWidthValue - 6; // Espaço disponível para texto

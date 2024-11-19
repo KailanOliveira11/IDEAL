@@ -98,3 +98,29 @@ button:hover {
     grid-template-columns: 1fr; /* Exibir uma coluna em telas menores */
   }
 }
+#observacao {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444; /* Borda levemente destacada */
+  background-color: #2b2b2b; /* Fundo do textarea */
+  color: #e0e0e0; /* Texto claro no textarea */
+  border-radius: 5px;
+  resize: vertical; /* Permitir redimensionamento vertical */
+  outline: none; /* Remover o outline padrão */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra interna */
+}
+
+#observacao::placeholder {
+  color: #777; /* Cor do placeholder */
+  font-style: italic;
+}
+
+/* Alterações para o hover e focus */
+#observacao:hover {
+  border-color: #666; /* Destacar borda ao passar o mouse */
+}
+
+#observacao:focus {
+  border-color: #3f51b5; /* Destacar borda ao focar no campo */
+  box-shadow: 0 0 8px #3f51b5; /* Sombra adicional ao focar */
+}

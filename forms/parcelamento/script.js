@@ -105,7 +105,7 @@ function criarPDF() {
   // Conteúdo de Observação ajustado para caber na largura disponível
   const maxWidth = colWidthValue - 6; // Espaço disponível para texto
   const observacaoLinhas = doc.splitTextToSize(observacao, maxWidth);
-  const observacaoHeight = observacaoLinhas.length * 7; // Altura baseada no número de linhas geradas
+  const observacaoHeight = observacaoLinhas.length * 8; // Altura baseada no número de linhas geradas
 
   // Ajustar posição da caixa de observação
   doc.rect(startX + colWidthLabel, startY, colWidthValue, observacaoHeight, "FD");

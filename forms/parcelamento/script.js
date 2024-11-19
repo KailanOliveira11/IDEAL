@@ -31,7 +31,8 @@ function criarPDF() {
     const valorParcela = document.getElementById("valorParcela").value;
     const numEntrada = document.getElementById("numEntrada").value;
     const valorEntrada = document.getElementById("valorEntrada").value;
-  
+    const observacao = document.getElementById('observacao').value; // Capturando o valor do campo de observação
+    
     // Tentar carregar o logo
     const logo = 'logo_ideal_sc.png';
     try {
@@ -66,7 +67,8 @@ function criarPDF() {
       { label: "Número de Parcelas:", value: numParcelas },
       { label: "Valor de Cada Parcela:", value: `R$ ${parseFloat(valorParcela).toFixed(2)}` },
       { label: "Quantidade de Entrada:", value: numEntrada },
-      { label: "Valor da Entrada:", value: `R$ ${parseFloat(valorEntrada).toFixed(2)}` }
+      { label: "Valor da Entrada:", value: `R$ ${parseFloat(valorEntrada).toFixed(2)}` },
+      { label: "Observação:", value: observacao } // Adicionando a observação ao array de dados
     ];
   
     // Aplicar estilo da tabela
